@@ -1,0 +1,112 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: AoE2 Random Map Script
+scopeName: source.aoe2-rms
+fileTypes: [rms]
+uuid: 0b2a431f-f33a-4fdb-97db-f9974ad80a0a
+
+patterns:
+- include: '#multilineComment'
+- include: '#sectionHeader'
+- include: '#conditional'
+- include: '#random'
+- include: '#command'
+- include: '#directive'
+
+repository:
+  multilineComment:
+    name: comment.block.aoe2-rms
+    begin: /\*
+    end: \*/
+
+  sectionHeader:
+    name: storage.type.section.aoe2-rms
+    match: \<[A-Z_]+\>
+
+  conditional:
+    patterns:
+    - include: '#conditionalStart'
+    - include: '#conditionalEnd'
+
+  random:
+    patterns:
+    - include: '#randomStart'
+    - include: '#randomEnd'
+    - include: '#randomChance'
+
+  command:
+    patterns:
+    - include: '#commandStatement'
+    - include: '#commandBlock'
+
+  directive:
+    name: meta.directive.aoe2-rms
+    begin: \#(const|define|include_drs)\b
+    beginCaptures:
+      '0': { name: keyword.other.directive.aoe2-rms }
+    end: \n
+    patterns:
+    - include: '#identifier'
+    - include: '#number'
+
+  conditionalStart:
+    name: meta.conditional.aoe2-rms
+    match: (if|elseif|else)(\s+([A-Z_]+))?
+    captures:
+      '1': { name: keyword.control.conditional.aoe2-rms }
+      '3': { name: variable.other.const.aoe2-rms }
+
+  conditionalEnd:
+    name: keyword.control.conditional.aoe2-rms
+    match: endif
+
+  randomStart:
+    name: keyword.control.random.aoe2-rms
+    match: \bstart_random\b
+
+  randomEnd:
+    name: keyword.control.random.aoe2-rms
+    match: \bend_random\b
+
+  randomChance:
+    name: meta.random.chance.aoe2-rms
+    match: \b(percent_chance)\s+(\d+)
+    captures:
+      '1': { name: keyword.control.random.aoe2-rms }
+      '2': { name: constant.numeric.aoe2-rms }
+
+  commandStatement:
+    name: meta.command.aoe2-rms
+    begin: \b[a-z_]+
+    beginCaptures:
+      '0': { name: entity.name.function.aoe2-rms }
+    end: \n
+    patterns:
+    - include: '#identifier'
+    - include: '#number'
+
+  commandBlock:
+    name: meta.commandBlock.aoe2-rms
+    begin: \{
+    beginCaptures:
+      '0': { name: punctuation.definition.mapping.begin.aoe2-rms }
+    end: \}
+    endCaptures:
+      '0': { name: punctuation.definition.mapping.end.aoe2-rms }
+    patterns:
+    - include: '#conditional'
+    - include: '#attribute'
+    - include: '#identifier'
+    - include: '#number'
+
+  attribute:
+    name: variable.parameter.attribute.aoe2-rms
+    match: \b[a-z_]+
+
+  identifier:
+    name: variable.other.const.aoe2-rms
+    match: \b[^\s0-9!@#\$%\^&\*\(\)\-\+=;:'"<>{}\[\]\?\/\\][^\s;'"<>{}\[\]\/\\]*
+
+  number:
+    name: constant.numeric.aoe2-rms
+    match: \b\d+
