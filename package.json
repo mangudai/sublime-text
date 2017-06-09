@@ -3,6 +3,15 @@
     "displayName": "aoe2-rms",
     "description": "AoE2 Random Map Scripting support for VS Code and Sublime Text",
     "version": "0.1.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mangudai/syntax-highlighting.git"
+    },
+    "homepage": "https://github.com/mangudai/syntax-highlighting",
+    "bugs": {
+        "url": "https://github.com/mangudai/syntax-highlighting/issues"
+    },
+    "license": "MIT",
     "publisher": "deltaidea",
     "engines": {
         "vscode": "^1.12.0"
