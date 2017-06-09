@@ -51,7 +51,7 @@ repository:
 
   conditionalStart:
     name: meta.conditional.aoe2-rms
-    match: (if|elseif|else)(\s+([A-Z_]+))?
+    match: (if|elseif|else)(\s+([^\s0-9!@#\$%\^&\*\(\)\-\+=;:'"<>{}\[\]\?\/\\][^\s;'"<>{}\[\]\/\\]*\b))?
     captures:
       '1': { name: keyword.control.conditional.aoe2-rms }
       '3': { name: variable.other.const.aoe2-rms }
@@ -106,7 +106,7 @@ repository:
 
   identifier:
     name: variable.other.const.aoe2-rms
-    match: \b[^\s0-9!@#\$%\^&\*\(\)\-\+=;:'"<>{}\[\]\?\/\\][^\s;'"<>{}\[\]\/\\]*
+    match: \b[^\s0-9!@#\$%\^&\*\(\)\-\+=;:'"<>{}\[\]\?\/\\][^\s;'"<>{}\[\]\/\\]*\b
 
   number:
     name: constant.numeric.aoe2-rms
