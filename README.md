@@ -11,6 +11,11 @@
 
 ## Release Notes
 
+### 0.1.1
+
+- Fixed highlighting of inline comments after commands and directives
+- Added meta info: `LICENSE` file, links to the repo in `package.json`
+
 ### 0.1.0
 
 - Added syntax highlighting
