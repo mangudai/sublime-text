@@ -11,6 +11,11 @@
 
 ## Release Notes
 
+### 0.1.2
+
+- Fixed highlighting of command blocks that start on the same line: `create_object TOWN_CENTER { ... }`
+- Fixed parsing `if` and `elseif` where identifier is valid but not UPPER_CASE. Identifiers can be almost anything.
+
 ### 0.1.1
 
 - Fixed highlighting of inline comments after commands and directives
