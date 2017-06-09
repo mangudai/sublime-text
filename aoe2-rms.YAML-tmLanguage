@@ -44,7 +44,7 @@ repository:
     begin: \#(const|define|include_drs)\b
     beginCaptures:
       '0': { name: keyword.other.directive.aoe2-rms }
-    end: \n
+    end: (?=\n|/\*)
     patterns:
     - include: '#identifier'
     - include: '#number'
@@ -80,7 +80,7 @@ repository:
     begin: \b[a-z_]+
     beginCaptures:
       '0': { name: entity.name.function.aoe2-rms }
-    end: \n
+    end: (?=\n|/\*)
     patterns:
     - include: '#identifier'
     - include: '#number'
@@ -98,6 +98,7 @@ repository:
     - include: '#attribute'
     - include: '#identifier'
     - include: '#number'
+    - include: '#multilineComment'
 
   attribute:
     name: variable.parameter.attribute.aoe2-rms
