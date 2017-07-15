@@ -252,6 +252,14 @@
           </dict>
           <dict>
             <key>include</key>
+            <string>#random</string>
+          </dict>
+          <dict>
+            <key>include</key>
+            <string>#directive</string>
+          </dict>
+          <dict>
+            <key>include</key>
             <string>#attribute</string>
           </dict>
           <dict>

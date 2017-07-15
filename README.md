@@ -1,15 +1,20 @@
-# aoe2-rms
+# AoE2 Random Map Scripting
 
-> Age of Empires 2 Random Map Scripting support for VS Code and Sublime Text
+> Age of Empires 2 Random Map Scripting support for Sublime Text
 
-![Screeshot of syntax highlighting](./screenshot.png)
+![Screeshot of syntax highlighting](https://github.com/mangudai/sublime-text/blob/master/screenshot.png?raw=true)
 
 ## Install
 
-- Visual Studio Code: `Ctrl/Cmd + Shift + X`, then `aoe2-rms`
-- Sublime Text (via [Package Control](https://packagecontrol.io/)): `Install Package` in command palette, then `aoe2-rms`
+- Install [Package Control](https://packagecontrol.io/) for Sublime Text.
+- Select `Install Package` in command palette, then search `aoe2-rms`.
 
 ## Release Notes
+
+### 0.2.0
+
+- Separated VS Code and Sublime Text support into two repos as they're becoming quite different.
+- Pulled latest changes from VS Code extension.
 
 ### 0.1.2
 

@@ -95,6 +95,8 @@ repository:
       '0': { name: punctuation.definition.mapping.end.aoe2-rms }
     patterns:
     - include: '#conditional'
+    - include: '#random'
+    - include: '#directive'
     - include: '#attribute'
     - include: '#identifier'
     - include: '#number'
