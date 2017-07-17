@@ -136,7 +136,7 @@
         <key>name</key>
         <string>meta.conditional.aoe2-rms</string>
         <key>match</key>
-        <string>(if|elseif|else)(\s+([^\s0-9!@#\$%\^&amp;\*\(\)\-\+=;:'"&lt;&gt;{}\[\]\?\/\\][^\s;'"&lt;&gt;{}\[\]\/\\]*\b))?</string>
+        <string>(if|elseif|else)(\s+(\b[^\s!@#\$%\^&amp;\*\(\)\-\+=;:'"&lt;&gt;{}\[\]\?\/\\][^\s;'"&lt;&gt;{}\[\]\/\\]*\b))?</string>
         <key>captures</key>
         <dict>
           <key>1</key>
@@ -288,7 +288,7 @@
         <key>name</key>
         <string>variable.other.const.aoe2-rms</string>
         <key>match</key>
-        <string>\b[^\s0-9!@#\$%\^&amp;\*\(\)\-\+=;:'"&lt;&gt;{}\[\]\?\/\\][^\s;'"&lt;&gt;{}\[\]\/\\]*\b</string>
+        <string>\b[^\s!@#\$%\^&amp;\*\(\)\-\+=;:'"&lt;&gt;{}\[\]\?\/\\][^\s;'"&lt;&gt;{}\[\]\/\\]*\b</string>
       </dict>
       <key>number</key>
       <dict>

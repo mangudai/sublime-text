@@ -11,6 +11,10 @@
 
 ## Release Notes
 
+### 0.2.1
+
+- Allowed identifiers to start with digits.
+
 ### 0.2.0
 
 - Separated VS Code and Sublime Text support into two repos as they're becoming quite different.
@@ -18,14 +22,14 @@
 
 ### 0.1.2
 
-- Fixed highlighting of command blocks that start on the same line: `create_object TOWN_CENTER { ... }`
+- Fixed highlighting of command blocks that start on the same line: `create_object TOWN_CENTER { ... }`.
 - Fixed parsing `if` and `elseif` where identifier is valid but not UPPER_CASE. Identifiers can be almost anything.
 
 ### 0.1.1
 
-- Fixed highlighting of inline comments after commands and directives
-- Added meta info: `LICENSE` file, links to the repo in `package.json`
+- Fixed highlighting of inline comments after commands and directives.
+- Added meta info: `LICENSE` file, links to the repo in `package.json`.
 
 ### 0.1.0
 
-- Added syntax highlighting
+- Added syntax highlighting.
