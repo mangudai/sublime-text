@@ -46,8 +46,8 @@ repository:
       '0': { name: keyword.other.directive.aoe2-rms }
     end: (?=\n|/\*)
     patterns:
-    - include: '#identifier'
     - include: '#number'
+    - include: '#identifier'
 
   conditionalStart:
     name: meta.conditional.aoe2-rms
@@ -82,8 +82,8 @@ repository:
       '0': { name: entity.name.function.aoe2-rms }
     end: (?=\n|/\*|\{)
     patterns:
-    - include: '#identifier'
     - include: '#number'
+    - include: '#identifier'
 
   commandBlock:
     name: meta.commandBlock.aoe2-rms
@@ -98,8 +98,8 @@ repository:
     - include: '#random'
     - include: '#directive'
     - include: '#attribute'
-    - include: '#identifier'
     - include: '#number'
+    - include: '#identifier'
     - include: '#multilineComment'
 
   attribute:
@@ -112,4 +112,4 @@ repository:
 
   number:
     name: constant.numeric.aoe2-rms
-    match: \b\d+
+    match: \b\d+\b

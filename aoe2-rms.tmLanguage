@@ -123,11 +123,11 @@
         <array>
           <dict>
             <key>include</key>
-            <string>#identifier</string>
+            <string>#number</string>
           </dict>
           <dict>
             <key>include</key>
-            <string>#number</string>
+            <string>#identifier</string>
           </dict>
         </array>
       </dict>
@@ -212,11 +212,11 @@
         <array>
           <dict>
             <key>include</key>
-            <string>#identifier</string>
+            <string>#number</string>
           </dict>
           <dict>
             <key>include</key>
-            <string>#number</string>
+            <string>#identifier</string>
           </dict>
         </array>
       </dict>
@@ -264,11 +264,11 @@
           </dict>
           <dict>
             <key>include</key>
-            <string>#identifier</string>
+            <string>#number</string>
           </dict>
           <dict>
             <key>include</key>
-            <string>#number</string>
+            <string>#identifier</string>
           </dict>
           <dict>
             <key>include</key>
@@ -295,7 +295,7 @@
         <key>name</key>
         <string>constant.numeric.aoe2-rms</string>
         <key>match</key>
-        <string>\b\d+</string>
+        <string>\b\d+\b</string>
       </dict>
     </dict>
   </dict>
